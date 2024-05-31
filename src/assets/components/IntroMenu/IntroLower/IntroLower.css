@@ -1,0 +1,29 @@
+.intro-lower{
+   display: flex;
+   flex-direction: column;
+   margin: 3rem 0;
+}
+
+
+.intro-start-button {
+   width: 15rem;
+   height: 3rem;
+   font-size: var(--btn-font-size);
+   color: white;
+   border-radius: 15px;
+   box-shadow: 1px 4px 30px rgba(0, 0, 0, 0.1);
+   background-color: var(--red-color);
+   cursor: pointer;
+   border: none;
+ }
+ 
+ .intro-start-button:hover {
+   background: white;
+ }
+ 
+ .intro-start-button:disabled {
+    background-color: gray; 
+    color: white; 
+    cursor: not-allowed;  
+    opacity: 0.5; 
+  }
