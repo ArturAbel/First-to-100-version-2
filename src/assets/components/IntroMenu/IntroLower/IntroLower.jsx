@@ -11,7 +11,7 @@ export const IntroLower = ({
   setDisplayIntro,
 }) => {
   const MIN_SCORE = 12;
-  const MAX_SCORE = 999;
+  const MAX_SCORE = 100;
 
   const [isDisabled, setIsDisabled] = useState(true);
 

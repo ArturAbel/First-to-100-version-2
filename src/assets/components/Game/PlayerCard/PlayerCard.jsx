@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./PlayerCard.css";
 import { Player } from "./Player/Player";
 
@@ -11,29 +10,48 @@ export const PlayerCard = ({
   setCurrentScore,
   playerOneName,
   playerTwoName,
+  handleRollDice,
+  setWinner,
+  winner,
+  setPlayer,
+  currentPlayer,
+  scoreLimit,
 }) => {
-   
-  const [currentPlayer, setPlayer] = useState(1);
+
+  console.log(`Here`,currentPlayer,`---`,playerOneName);
+
 
   return (
     <div className="player-card-container">
-      {currentPlayer === 1 ? (
+      {currentPlayer === playerOneName ? (
         <Player
           playerScore={playerOneScore}
-          playerName={playerOneName}
+          playerName ={playerOneName}
           setPlayerScore={setPlayerOneScore}
           currentScore={currentScore}
           setCurrentScore={setCurrentScore}
-          setPlayer = {setPlayer}
+          setPlayer={setPlayer}
+          currentPlayer={currentPlayer}
+          handleRollDice={handleRollDice}
+          winner={winner}
+          setWinner={setWinner}
+          otherPlayerName={playerTwoName}
+          scoreLimit={scoreLimit}
         />
       ) : (
         <Player
           playerScore={playerTwoScore}
-          playerName={playerTwoName}
+          playerName ={playerTwoName}
           setPlayerScore={setPlayerTwoScore}
           currentScore={currentScore}
           setCurrentScore={setCurrentScore}
-          setPlayer = {setPlayer}
+          setPlayer={setPlayer}
+          currentPlayer={currentPlayer}
+          handleRollDice={handleRollDice}
+          winner={winner}
+          setWinner={setWinner}
+          otherPlayerName={playerOneName}
+          scoreLimit={scoreLimit}
         />
       )}
     </div>

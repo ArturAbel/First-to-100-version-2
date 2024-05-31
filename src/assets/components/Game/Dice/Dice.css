@@ -1,11 +1,10 @@
 .dice-container {
   width: 42rem;
   height: 15rem;
-  background-color: rgb(255, 186, 186);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 5rem;
   position: relative;
 }
 

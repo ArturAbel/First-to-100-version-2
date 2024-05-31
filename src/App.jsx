@@ -2,13 +2,6 @@ import { useState } from "react";
 import { Game } from "./assets/components/Game/Game";
 import { IntroMenu } from "./assets/components/IntroMenu/IntroMenu";
 
-// useState dice (game)
-// useState current score
-// useState total players score
-// useState roll button
-// useState hold button
-// useState new button
-
 function App() {
   const [playerOneName, setPlayerOneName] = useState("");
   const [playerTwoName, setPlayerTwoName] = useState("");
@@ -16,7 +9,7 @@ function App() {
   const [displayIntro, setDisplayIntro] = useState(true);
 
   return (
-    <>
+    <div>{ displayIntro ?
       <IntroMenu
         playerOneName={playerOneName}
         setPlayerOneName={setPlayerOneName}
@@ -27,14 +20,14 @@ function App() {
         displayIntro={displayIntro}
         setDisplayIntro={setDisplayIntro}
       />
-      <Game
+      : <Game
         playerOneName={playerOneName}
         playerTwoName={playerTwoName}
         scoreLimit={scoreLimit}
         setDisplayIntro={setDisplayIntro}
         setScoreLimit={setScoreLimit}
       />
-    </>
+}</div>
   );
 }
 

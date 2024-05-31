@@ -3,20 +3,24 @@ import { DiceCube } from "./DiceCube/DiceCube";
 import "./Dice.css";
 
 export const Dice = ({
-  currentScore,
-  setCurrentScore,
   setDisplayIntro,
   setScoreLimit,
+  leftDice,
+  RightDice,
 }) => {
   const handleDisplayIntro = () => {
     setScoreLimit();
     setDisplayIntro(true);
   };
 
+  const randomKey = () => {
+    return Math.random();
+  };
+
   return (
     <div className="dice-container">
-      <DiceCube />
-      <DiceCube />
+      <DiceCube key={randomKey} diceSide={leftDice} />
+      <DiceCube diceSide={RightDice} />
       <button className="new-game-button" onClick={handleDisplayIntro}>
         New Game
       </button>
