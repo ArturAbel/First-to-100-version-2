@@ -1,0 +1,16 @@
+.dice-container {
+  width: 42rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+}
+
+.new-game-button {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  right: -8rem;
+}

@@ -1,0 +1,9 @@
+@font-face {
+   font-family: 'Tumblindicee';
+   src: url('/assets/fonts/Tumblindicee.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Komigo';
+   src: url('/assets/fonts/komigo.ttf') format('truetype');
+}
