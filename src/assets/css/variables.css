@@ -4,14 +4,15 @@
   --font-title: "Komigo", sans-serif;
 
   /* Font Sizes */
-  --fontSize-header-intro: 5rem;
-  --fontSize-subtitles-intro: 1.5rem;
-  --fontSize-score-top: 2.4rem;
   --fontSize-currentScore-bottom: 3rem;
-  --fontSize-names: 1.7rem;
-  --fontSize-text-intro: 1.3rem;
-  --fontSize-input-intro: 1.2rem;
   --fontSize-input-title-intro: 1rem;
+  --fontSize-subtitles-intro: 1.5rem;
+  --fontSize-input-intro: 1.2rem;
+  --fontSize-header-intro: 5rem;
+  --fontSize-text-intro: 1.3rem;
+  --fontSize-score-top: 2.4rem;
+  --fontSize-win-count:1.2rem;
+  --fontSize-names: 1.7rem;
 
   /* Font Weights */
   --fontWeight-total-score:600;

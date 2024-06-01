@@ -6,28 +6,34 @@ function App() {
   const [playerOneName, setPlayerOneName] = useState("");
   const [playerTwoName, setPlayerTwoName] = useState("");
   const [displayIntro, setDisplayIntro] = useState(true);
+  const [playerOneWin, setPlayerOneWin] = useState(0);
+  const [playerTwoWin, setPlayerTwoWin] = useState(0);
   const [scoreLimit, setScoreLimit] = useState();
 
   return (
     <div>
       {displayIntro ? (
         <IntroMenu
+        setPlayerOneName={setPlayerOneName}
+        setPlayerTwoName={setPlayerTwoName}
+        setDisplayIntro={setDisplayIntro}
           playerOneName={playerOneName}
-          setPlayerOneName={setPlayerOneName}
           playerTwoName={playerTwoName}
-          setPlayerTwoName={setPlayerTwoName}
-          scoreLimit={scoreLimit}
           setScoreLimit={setScoreLimit}
           displayIntro={displayIntro}
-          setDisplayIntro={setDisplayIntro}
+          scoreLimit={scoreLimit}
         />
       ) : (
         <Game
-          playerOneName={playerOneName}
-          playerTwoName={playerTwoName}
-          scoreLimit={scoreLimit}
-          setDisplayIntro={setDisplayIntro}
-          setScoreLimit={setScoreLimit}
+        setDisplayIntro={setDisplayIntro}
+        setPlayerOneWin={setPlayerOneWin}
+        setPlayerTwoWin={setPlayerTwoWin}
+        playerOneName={playerOneName}
+        playerTwoName={playerTwoName}
+        playerOneWin={playerOneWin}
+        playerTwoWin={playerTwoWin}
+        setScoreLimit={setScoreLimit}
+        scoreLimit={scoreLimit}
         />
       )}
     </div>

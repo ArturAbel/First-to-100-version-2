@@ -23,17 +23,16 @@
 
 @keyframes scalingAnimation {
   from {
-   color: black;
-    left: 0px;
-    transform: scale(0.5);
+    color: black;
+    transform: scale(0.9);
   }
   50% {
-   color: black;
-    transform: scale(1.5);
+    color: black;
+    transform: scale(1.1);
   }
 
   to {
-   color: black;
-    transform: scale(0.5);
+    color: black;
+    transform: scale(0.9);
   }
 }

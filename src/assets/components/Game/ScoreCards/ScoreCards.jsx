@@ -1,22 +1,26 @@
 import { Score } from "./Score/Score";
+import { Wins } from "./Wins/Wins";
+
 import "./ScoreCards.css";
 
 export const ScoreCards = ({
-  playerOneName,
-  playerTwoName,
-  scoreLimit,
   playerOneScore,
   playerTwoScore,
+  playerOneName,
+  playerTwoName,
+  playerOneWin,
+  playerTwoWin,
+  scoreLimit,
 }) => {
   return (
     <div className="scores-container">
-      <div className="player-wins"></div>
       <Score
         className="player-one-colors"
         playerName={playerOneName}
         scoreLimit={scoreLimit}
         playerScore={playerOneScore}
       />
+      <Wins playerOneWin={playerOneWin} playerTwoWin={playerTwoWin} />
       <Score
         className="player-two-colors"
         playerName={playerTwoName}

@@ -7,10 +7,15 @@ import "./Game.css";
 
 export const Game = ({
   setDisplayIntro,
+  setPlayerOneWin,
+  setPlayerTwoWin,
   setScoreLimit,
   playerOneName,
   playerTwoName,
+  playerOneWin,
+  playerTwoWin,
   scoreLimit,
+
 }) => {
 
   const DICE_SIX = 6;
@@ -18,9 +23,10 @@ export const Game = ({
   const [currentPlayer, setPlayer] = useState(playerOneName);
   const [playerOneScore, setPlayerOneScore] = useState(0);
   const [playerTwoScore, setPlayerTwoScore] = useState(0);
+
   const [currentScore, setCurrentScore] = useState(0);
-  const [leftDice, setLeftDice] = useState(1);
   const [rightDice, setRightDice] = useState(2);
+  const [leftDice, setLeftDice] = useState(1);
   const [winner, setWinner] = useState(false);
 
   const rollDice = () => Math.floor(Math.random() * DICE_SIX) + 1;
@@ -38,35 +44,39 @@ export const Game = ({
     <div className="game-container">
       {winner && <h1 className="winner-announcement">{currentPlayer} Won!</h1>}
       <ScoreCards
-        playerOneName={playerOneName}
-        playerTwoName={playerTwoName}
-        scoreLimit={scoreLimit}
         playerOneScore={playerOneScore}
         playerTwoScore={playerTwoScore}
+        playerOneName={playerOneName}
+        playerTwoName={playerTwoName}
+        playerOneWin={playerOneWin}
+        playerTwoWin={playerTwoWin}
+        scoreLimit={scoreLimit}
       />
       <Dice
         currentScore={currentScore}
         setCurrentScore={setCurrentScore}
         setDisplayIntro={setDisplayIntro}
         setScoreLimit={setScoreLimit}
-        leftDice={leftDice}
         rightDice={rightDice}
+        leftDice={leftDice}
       />
       <PlayerCard
-        playerOneScore={playerOneScore}
-        playerTwoScore={playerTwoScore}
         setPlayerOneScore={setPlayerOneScore}
         setPlayerTwoScore={setPlayerTwoScore}
-        currentScore={currentScore}
         setCurrentScore={setCurrentScore}
+        setPlayerOneWin={setPlayerOneWin}
+        setPlayerTwoWin={setPlayerTwoWin}
+        playerOneScore={playerOneScore}
+        playerTwoScore={playerTwoScore}
+        handleRollDice={handleRollDice}
+        currentPlayer={currentPlayer}
         playerOneName={playerOneName}
         playerTwoName={playerTwoName}
-        handleRollDice={handleRollDice}
+        currentScore={currentScore}
         scoreLimit={scoreLimit}
-        winner={winner}
         setWinner={setWinner}
-        currentPlayer={currentPlayer}
         setPlayer={setPlayer}
+        winner={winner}
       />
     </div>
   );

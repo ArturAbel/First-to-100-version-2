@@ -1,9 +1,17 @@
 .scores-container{
-   width: 100%;
-   height:18rem;
-   display: flex;
    justify-content: center;
    align-items: center;
+   position: relative;
+   display: flex;
+   padding-top: 4rem;
+   width: 100%;
+   height:15rem;
    gap: 2rem;
 }
+
+
+
+
+
+
 

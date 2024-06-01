@@ -15,6 +15,8 @@ export const Player = ({
   scoreLimit,
   setWinner,
   className,
+  setPlayerWin,
+  setOtherPlayerWin,
 }) => {
   const [holdDisabled, setHoldDisabled] = useState(true);
   const [rollDisabled, setRollDisabled] = useState(false);
@@ -42,6 +44,7 @@ export const Player = ({
       setWinner(true);
       setRollDisabled(true);
       setPlayer(playerName);
+      setPlayerWin((previous) => previous + 1);
       return true;
     }
 
@@ -49,6 +52,7 @@ export const Player = ({
       setWinner(true);
       setRollDisabled(true);
       setPlayer(otherPlayerName);
+      setOtherPlayerWin((previous) => previous + 1);
       return true;
     }
   };

@@ -1,0 +1,18 @@
+.win-container {
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+}
+
+.win-score {
+  background-color: var(--background-score);
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 0.1rem;
+  height: 3rem;
+  width: 3rem;
+}

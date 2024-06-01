@@ -6,6 +6,8 @@ export const PlayerCard = ({
   setPlayerOneScore,
   setPlayerTwoScore,
   setCurrentScore,
+  setPlayerOneWin,
+  setPlayerTwoWin,
   handleRollDice,
   playerOneScore,
   playerTwoScore,
@@ -25,34 +27,40 @@ export const PlayerCard = ({
       {currentPlayer === playerOneName ? (
         <Player
           className="player-one-colors"
-          playerScore={playerOneScore}
-          playerName={playerOneName}
+          setOtherPlayerWin={setPlayerTwoWin}
           setPlayerScore={setPlayerOneScore}
-          currentScore={currentScore}
           setCurrentScore={setCurrentScore}
-          setPlayer={setPlayer}
-          currentPlayer={currentPlayer}
           handleRollDice={handleRollDice}
-          winner={winner}
-          setWinner={setWinner}
+          setPlayerWin={setPlayerOneWin}
           otherPlayerName={playerTwoName}
+          playerScore={playerOneScore}
+          currentPlayer={currentPlayer}
+          playerName={playerOneName}
+          currentScore={currentScore}
           scoreLimit={scoreLimit}
+          setPlayer={setPlayer}
+          setWinner={setWinner}
+          winner={winner}
+
+
         />
       ) : (
         <Player
           className="player-two-colors"
-          playerScore={playerTwoScore}
-          playerName={playerTwoName}
+          setOtherPlayerWin={setPlayerOneWin}
           setPlayerScore={setPlayerTwoScore}
-          currentScore={currentScore}
           setCurrentScore={setCurrentScore}
-          setPlayer={setPlayer}
-          currentPlayer={currentPlayer}
           handleRollDice={handleRollDice}
-          winner={winner}
-          setWinner={setWinner}
           otherPlayerName={playerOneName}
+          setPlayerWin={setPlayerTwoWin}
+          playerScore={playerTwoScore}
+          currentPlayer={currentPlayer}
+          currentScore={currentScore}
+          playerName={playerTwoName}
           scoreLimit={scoreLimit}
+          setPlayer={setPlayer}
+          setWinner={setWinner}
+          winner={winner}
         />
       )}
     </div>
