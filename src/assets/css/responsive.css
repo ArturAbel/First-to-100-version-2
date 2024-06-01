@@ -2,4 +2,8 @@
   .new-game-button {
     right: 0;
   }
+
+  .wins {
+    top: -4rem;
+  }
 }
