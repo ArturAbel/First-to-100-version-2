@@ -20,7 +20,7 @@
   border-radius: 5px;
   margin-top: -4rem;
   text-align: center;
-  
+  z-index: 3;
 }
 
 .player-score-container {

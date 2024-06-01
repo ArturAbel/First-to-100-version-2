@@ -1,24 +1,25 @@
-.wins{
-   position: absolute;
-   width: 100%;
-   height: 5rem;
-   top: -2.6rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin-right: 2rem;
+.wins {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin-right: 2rem;
+  width: 100%;
+  height: 5rem;
+  top: -2.6rem;
+  display: flex;
+  z-index: 0;
 }
 
-.wins-container{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 2rem;
+.wins-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
 }
 
-.wins-title{
-   font-size:var(--fontSize-win-count);
-   text-transform: uppercase;
-   font-weight: 600;
+.wins-title {
+  font-size: var(--fontSize-win-count);
+  text-transform: uppercase;
+  font-weight: 600;
 }
