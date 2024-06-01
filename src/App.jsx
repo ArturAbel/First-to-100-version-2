@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { Game } from "./assets/components/Game/Game";
 import { IntroMenu } from "./assets/components/IntroMenu/IntroMenu";
+import { Game } from "./assets/components/Game/Game";
+import { useState } from "react";
 
 function App() {
   const [playerOneName, setPlayerOneName] = useState("");
   const [playerTwoName, setPlayerTwoName] = useState("");
-  const [scoreLimit, setScoreLimit] = useState();
   const [displayIntro, setDisplayIntro] = useState(true);
+  const [scoreLimit, setScoreLimit] = useState();
 
   return (
     <div>

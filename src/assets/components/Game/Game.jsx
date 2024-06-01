@@ -6,12 +6,13 @@ import { Dice } from "./Dice/Dice";
 import "./Game.css";
 
 export const Game = ({
+  setDisplayIntro,
+  setScoreLimit,
   playerOneName,
   playerTwoName,
   scoreLimit,
-  setDisplayIntro,
-  setScoreLimit,
 }) => {
+
   const DICE_SIX = 6;
 
   const [currentPlayer, setPlayer] = useState(playerOneName);

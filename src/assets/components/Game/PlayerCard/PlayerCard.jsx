@@ -1,21 +1,22 @@
-import "./PlayerCard.css";
 import { Player } from "./Player/Player";
 
+import "./PlayerCard.css";
+
 export const PlayerCard = ({
-  playerOneScore,
-  playerTwoScore,
   setPlayerOneScore,
   setPlayerTwoScore,
-  currentScore,
   setCurrentScore,
+  handleRollDice,
+  playerOneScore,
+  playerTwoScore,
+  currentPlayer,
+  currentScore,
   playerOneName,
   playerTwoName,
-  handleRollDice,
-  setWinner,
-  winner,
-  setPlayer,
-  currentPlayer,
   scoreLimit,
+  setWinner,
+  setPlayer,
+  winner,
 }) => {
 
 

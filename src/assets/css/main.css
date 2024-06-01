@@ -9,17 +9,17 @@ body {
 }
 
 .player-one-colors {
-  background-color: rgb(255, 126, 107);
-  box-shadow: rgba(255, 126, 107, 0.4) -5px 5px,
-    rgba(255, 126, 107, 0.3) -10px 10px, rgba(255, 126, 107, 0.2) -15px 15px,
-    rgba(255, 126, 107, 0.1) -20px 20px, rgba(255, 126, 107, 0.05) -25px 25px;
+  background-color: rgb(249, 87, 56);
+  box-shadow: rgba(249, 87, 56, 0.4) -5px 5px,
+    rgba(249, 87, 56, 0.3) -10px 10px, rgba(249, 87, 56, 0.2) -15px 15px,
+    rgba(249, 87, 56, 0.1) -20px 20px, rgba(249, 87, 56, 0.05) -25px 25px;
 }
 
 .player-two-colors {
-  background-color: rgb(145, 196, 242);
-  box-shadow: rgba(145, 196, 242, 0.4) 5px 5px,
-    rgba(145, 196, 242, 0.3) 10px 10px, rgba(145, 196, 242, 0.2) 15px 15px,
-    rgba(145, 196, 242, 0.1) 20px 20px, rgba(145, 196, 242, 0.05) 25px 25px;
+  background-color: rgb(34, 146, 164);
+  box-shadow: rgba(34, 146, 164, 0.4) 5px 5px,
+    rgba(34, 146, 164, 0.3) 10px 10px, rgba(34, 146, 164, 0.2) 15px 15px,
+    rgba(34, 146, 164, 0.1) 20px 20px, rgba(34, 146, 164, 0.05) 25px 25px;
 }
 
 .player-one-colors .player-card-name {

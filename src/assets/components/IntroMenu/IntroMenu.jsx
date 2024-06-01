@@ -1,15 +1,16 @@
 import { IntroLower } from "./IntroLower/IntroLower";
+
 import "./IntroMenu.css";
 
 export const IntroMenu = ({
-  playerOneName,
   setPlayerOneName,
-  playerTwoName,
   setPlayerTwoName,
-  scoreLimit,
+  setDisplayIntro,
+  playerOneName,
+  playerTwoName,
   setScoreLimit,
   displayIntro,
-  setDisplayIntro,
+  scoreLimit,
 }) => {
   return (
     <>
@@ -18,22 +19,22 @@ export const IntroMenu = ({
           <div className="intro-upper">
             <h1 className="intro-title">Dice Clash</h1>
             <p className="intro-subtitle">
-              <strong>Objective:</strong>
+              <strong>Objective</strong>
             </p>
-            <p>
+            <p className="intro-text">
               The objective is to reach the exact number of points without
               exceeding it. The player who goes over loses!
             </p>
             <br />
             <p className="intro-subtitle">
-              <strong>How to play Dice Clash!</strong>
+              <strong>How to play</strong>
             </p>
-            <p>Select the points limit below.</p>
-            <p>Roll the dice at least once during your turn.</p>
-            <p>
+            <p className="intro-text">Select the points limit below.</p>
+            <p className="intro-text">Roll the dice at least once during your turn.</p>
+            <p className="intro-text">
               After the first roll You can choose to roll again or click HOLD.
             </p>
-            <p>
+            <p className="intro-text">
               The point you have earned will be accumulated to your total amount
               of points.
             </p>

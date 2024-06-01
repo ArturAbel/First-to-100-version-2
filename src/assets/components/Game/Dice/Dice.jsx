@@ -5,8 +5,8 @@ import "./Dice.css";
 export const Dice = ({
   setDisplayIntro,
   setScoreLimit,
-  leftDice,
   rightDice,
+  leftDice,
 }) => {
 
   const handleDisplayIntro = () => {

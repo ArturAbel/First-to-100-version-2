@@ -1,21 +1,41 @@
 :root {
-  
   /* Fonts */
-   --font-dice: "GameblinkDemo", sans-serif;
+  --font-text: "space", sans-serif;
   --font-title: "Komigo", sans-serif;
 
-
   /* Font Sizes */
-  --fontSize-numbers: 2rem;
+  --fontSize-header-intro: 5rem;
+  --fontSize-subtitles-intro: 1.5rem;
+  --fontSize-score-top: 2.4rem;
+  --fontSize-currentScore-bottom: 3rem;
   --fontSize-names: 1.7rem;
+  --fontSize-text-intro: 1.3rem;
+  --fontSize-input-intro: 1.2rem;
+  --fontSize-input-title-intro: 1rem;
+
+  /* Font Weights */
+  --fontWeight-total-score:600;
+  --fontWeight-current-score:600;
+  --fontWeight-names:600;
+  --fontWeight-text-intro: 400;
+  --fontWeight-player-score:400;
+
+  /* Backgrounds */
+  --background-input: #E1E0E1;
+  --background-name: aliceblue;
+  --background-score:#e6e6e6;
+  --background-button: #bbb;
+  --background-button-disabled:rgba(0, 0, 0, 0.2);
+
+}
+
+/* Fonts */
+@font-face {
+  font-family: "space";
+  src: url("/assets/fonts/space.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'GameblinkDemo';
-  src: url('/assets/fonts/GameblinkDemo.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Komigo';
-  src: url('/assets/fonts/komigo.ttf') format('truetype');
+  font-family: "Komigo";
+  src: url("/assets/fonts/komigo.ttf") format("truetype");
 }

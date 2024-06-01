@@ -12,13 +12,15 @@
 }
 
 .player-name {
+  background-color: var(--background-name);
+  font-size: var(--fontSize-names);
+  font-weight: var(--fontWeight-names);
   width: 8rem;
   height: 3rem;
   border-radius: 5px;
   margin-top: -4rem;
-  background-color: aliceblue;
   text-align: center;
-  font-size: var(--fontSize-names);
+  
 }
 
 .player-score-container {
@@ -31,12 +33,13 @@
 }
 
 .player-score {
+  background-color: var(--background-score);
+  font-size: var(--fontSize-score-top);
+  font-weight: var(--fontWeight-player-score);
   width: 6rem;
   height: 3.5rem;
-  background-color: #e6e6e6;
   text-align: start;
-  padding-left: 1rem;
-  font-size: var(--fontSize-numbers);
+  padding-left: 1.2rem;
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -50,11 +53,12 @@
 }
 
 .total-score {
+  background-color: var(--background-score);
+  font-size: var(--fontSize-score-top);
+  font-weight: var(--fontWeight-total-score);
   width: 6rem;
   height: 3.5rem;
-  background-color: #e6e6e6;
   text-align: end;
   padding-right: 1rem;
-  font-size: var(--fontSize-numbers);
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
 }

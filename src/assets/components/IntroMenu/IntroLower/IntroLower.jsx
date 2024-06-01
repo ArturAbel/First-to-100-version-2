@@ -1,14 +1,15 @@
 import { useState } from "react";
+
 import "./IntroLower.css";
 
 export const IntroLower = ({
-  playerOneName,
   setPlayerOneName,
-  playerTwoName,
   setPlayerTwoName,
-  scoreLimit,
-  setScoreLimit,
   setDisplayIntro,
+  playerOneName,
+  playerTwoName,
+  setScoreLimit,
+  scoreLimit,
 }) => {
   const MIN_SCORE = 12;
   const MAX_SCORE = 100;
@@ -35,38 +36,47 @@ export const IntroLower = ({
 
   return (
     <div className="intro-lower">
-      <span className="input-description">Player 1:</span>
-      <input
-        className="intro-name"
-        type="text"
-        value={playerOneName}
-        maxLength={MAX_NAME_LENGTH}
-        placeholder="Name"
-        onChange={(e) => {
-          setPlayerOneName(e.target.value);
-        }}
-      />
-      <span className="input-description">Player 2:</span>
-      <input
-        className="intro-name"
-        type="text"
-        value={playerTwoName}
-        maxLength={MAX_NAME_LENGTH}
-        placeholder="Name"
-        onChange={(e) => {
-          setPlayerTwoName(e.target.value);
-        }}
-      />
-      <span className="input-description">Max dice score:</span>
-      <input
-        className="intro-score"
-        type="number"
-        value={scoreLimit}
-        min={MIN_SCORE}
-        max={MAX_SCORE}
-        placeholder={`${MIN_SCORE} to ${MAX_SCORE}`}
-        onChange={handleScoreInput}
-      />
+      <div className="input-names-container">
+        <div>
+          <span className="input-description">Player 1</span>
+          <input
+            className="intro-name"
+            type="text"
+            value={playerOneName}
+            maxLength={MAX_NAME_LENGTH}
+            placeholder="Name"
+            onChange={(e) => {
+              setPlayerOneName(e.target.value);
+            }}
+          />
+        </div>
+        <div>
+          <span className="input-description">Player 2</span>
+          <input
+            className="intro-name"
+            type="text"
+            value={playerTwoName}
+            maxLength={MAX_NAME_LENGTH}
+            placeholder="Name"
+            onChange={(e) => {
+              setPlayerTwoName(e.target.value);
+            }}
+          />
+        </div>
+        <div>
+          <span className="input-description">Max score</span>
+          <input
+            className="intro-score"
+            type="number"
+            value={scoreLimit}
+            min={MIN_SCORE}
+            max={MAX_SCORE}
+            placeholder={`${MIN_SCORE} to ${MAX_SCORE}`}
+            onChange={handleScoreInput}
+          />
+        </div>
+      </div>
+
       <button
         className="intro-start-button"
         disabled={isDisabled}

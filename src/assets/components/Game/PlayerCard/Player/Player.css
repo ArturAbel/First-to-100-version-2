@@ -1,6 +1,6 @@
 .player-container {
-  width: 20rem;
-  height: 20rem;
+  width: 23rem;
+  height: 23rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,29 +8,32 @@
 }
 
 .player-card-name {
+  font-size: var(--fontSize-names);
+  background-color:var(--background-name);
+  font-weight: var(--fontWeight-names);
   width: 10rem;
   height: 3rem;
-  background-color: aliceblue;
   border-radius: 5px;
   margin-top: -1rem;
   text-align: center;
   padding: 0.2rem;
-  font-size: var(--fontSize-names);
 }
 
 .current-score-title {
+  font-size: var(--fontSize-names);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .current-score {
+  background-color: var(--background-score);
+  font-size: var(--fontSize-currentScore-bottom);
+  font-weight: var(--fontWeight-current-score);
   width: 6rem;
   height: 6rem;
-  background-color: #e6e6e6;
   border-radius: 10px;
+  padding-top: 0.6rem;
   text-align: center;
-  font-size: var(--fontSize-numbers);
-  padding: 1.2rem 0;
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
 }
 

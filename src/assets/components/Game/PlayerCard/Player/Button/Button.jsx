@@ -1,8 +1,8 @@
 import "./Button.css";
 
 export const Button = ({
-  text,
   buttonAction,
+  text,
   disabled,
 
 }) => {

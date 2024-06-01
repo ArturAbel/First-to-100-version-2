@@ -4,16 +4,16 @@ import { useState } from "react";
 import "./Player.css";
 
 export const Player = ({
+  otherPlayerName,
+  setPlayerScore,
+  setCurrentScore,
+  handleRollDice,
+  currentScore,
   playerScore,
   playerName,
-  setPlayerScore,
-  currentScore,
-  setCurrentScore,
   setPlayer,
-  handleRollDice,
   scoreLimit,
   setWinner,
-  otherPlayerName,
   className,
 }) => {
   const [holdDisabled, setHoldDisabled] = useState(true);
