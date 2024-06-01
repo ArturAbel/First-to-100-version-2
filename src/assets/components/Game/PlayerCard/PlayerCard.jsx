@@ -1,57 +1,66 @@
-import "./PlayerCard.css";
 import { Player } from "./Player/Player";
 
+import "./PlayerCard.css";
+
 export const PlayerCard = ({
-  playerOneScore,
-  playerTwoScore,
   setPlayerOneScore,
   setPlayerTwoScore,
-  currentScore,
   setCurrentScore,
+  setPlayerOneWin,
+  setPlayerTwoWin,
+  handleRollDice,
+  playerOneScore,
+  playerTwoScore,
+  currentPlayer,
+  currentScore,
   playerOneName,
   playerTwoName,
-  handleRollDice,
-  setWinner,
-  winner,
-  setPlayer,
-  currentPlayer,
   scoreLimit,
+  setWinner,
+  setPlayer,
+  winner,
 }) => {
-
-  console.log(`Here`,currentPlayer,`---`,playerOneName);
 
 
   return (
     <div className="player-card-container">
       {currentPlayer === playerOneName ? (
         <Player
-          playerScore={playerOneScore}
-          playerName ={playerOneName}
+          className="player-one-colors"
+          setOtherPlayerWin={setPlayerTwoWin}
           setPlayerScore={setPlayerOneScore}
-          currentScore={currentScore}
           setCurrentScore={setCurrentScore}
-          setPlayer={setPlayer}
-          currentPlayer={currentPlayer}
           handleRollDice={handleRollDice}
-          winner={winner}
-          setWinner={setWinner}
+          setPlayerWin={setPlayerOneWin}
           otherPlayerName={playerTwoName}
+          playerScore={playerOneScore}
+          currentPlayer={currentPlayer}
+          playerName={playerOneName}
+          currentScore={currentScore}
           scoreLimit={scoreLimit}
+          setPlayer={setPlayer}
+          setWinner={setWinner}
+          winner={winner}
+
+
         />
       ) : (
         <Player
-          playerScore={playerTwoScore}
-          playerName ={playerTwoName}
+          className="player-two-colors"
+          setOtherPlayerWin={setPlayerOneWin}
           setPlayerScore={setPlayerTwoScore}
-          currentScore={currentScore}
           setCurrentScore={setCurrentScore}
-          setPlayer={setPlayer}
-          currentPlayer={currentPlayer}
           handleRollDice={handleRollDice}
-          winner={winner}
-          setWinner={setWinner}
           otherPlayerName={playerOneName}
+          setPlayerWin={setPlayerTwoWin}
+          playerScore={playerTwoScore}
+          currentPlayer={currentPlayer}
+          currentScore={currentScore}
+          playerName={playerTwoName}
           scoreLimit={scoreLimit}
+          setPlayer={setPlayer}
+          setWinner={setWinner}
+          winner={winner}
         />
       )}
     </div>

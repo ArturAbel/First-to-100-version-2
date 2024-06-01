@@ -1,12 +1,33 @@
+.button {
+  background-color: var(--background-button);
+  font-family: var(--font-text);
+  width: 7rem;
+  height: 3rem;
+  color: black;
+  font-weight: bold;
+  float: left;
+  height: 4rem;
+  padding: 0 2rem;
+  border: solid 5px black;
+  border-width: 0 4px 5px 0;
+  border-radius: 5px;
+  border-color: transparent #ddd #999 transparent;
+  cursor: pointer;
+}
 
-.button{
-   width: 7rem;
-   height: 3rem;
+.button:hover {
+  border-width: 0 2px 3px 0;
+  left: 2px;
+  top: 4px;
 }
 
 .button:disabled {
-   background-color: gray; 
-   color: white; 
-   cursor: not-allowed;  
-   opacity: 0.5; 
- }
+  background-color: var(--background-button-disabled);
+  color: black;
+  cursor: not-allowed;
+  border-width: none;
+  opacity: 0.5;
+  border-width: 0;
+  left: 0;
+  top: 0;
+}

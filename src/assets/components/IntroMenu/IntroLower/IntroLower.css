@@ -1,29 +1,70 @@
-.intro-lower{
-   display: flex;
-   flex-direction: column;
-   margin: 3rem 0;
+.intro-lower {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  gap: 0.3rem;
 }
 
+.input-names-container {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.intro-name,
+.intro-score {
+  font-size: var(--fontSize-input-intro);
+  background: var(--background-input);
+  width: 8rem;
+  height: 2.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 1rem;
+  margin-top: 0.7rem;
+}
+
+.input-description {
+  font-size: var(--fontSize-input-title-intro);
+  text-transform: uppercase;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 1.1rem;
+}
 
 .intro-start-button {
-   width: 15rem;
-   height: 3rem;
-   font-size: var(--btn-font-size);
-   color: white;
-   border-radius: 15px;
-   box-shadow: 1px 4px 30px rgba(0, 0, 0, 0.1);
-   background-color: var(--red-color);
-   cursor: pointer;
-   border: none;
- }
- 
- .intro-start-button:hover {
-   background: white;
- }
- 
- .intro-start-button:disabled {
-    background-color: gray; 
-    color: white; 
-    cursor: not-allowed;  
-    opacity: 0.5; 
-  }
+  background-color: var(--background-button);
+  font-size: var(--btn-font-size);
+  width: 15rem;
+  height: 3rem;
+  color: black;
+  font-weight: bold;
+  margin: 2.5rem auto;
+  float: left;
+  height: 4rem;
+  padding: 0 2rem;
+  border: solid 5px black;
+  border-width: 0 4px 5px 0;
+  border-radius: 5px;
+  border-color: transparent #ddd #999 transparent;
+}
+
+.intro-start-button:hover {
+  border-width: 0 2px 3px 0;
+  left: 2px;
+  top: 4px;
+}
+.intro-start-button:disabled {
+  background-color: var(--background-button-disabled);
+  color: black;
+  cursor: not-allowed;
+  opacity: 0.5;
+  border-width: 0;
+  border-width: none;
+  left: 0;
+  top: 0;
+}

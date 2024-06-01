@@ -1,36 +1,40 @@
 .player-container {
-  width: 20rem;
-  height: 20rem;
-  background-color: darkkhaki;
+  width: 23rem;
+  height: 23rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 5% 5% 5% 5%;
 }
 
 .player-card-name {
-  width: 10rem;
-  height: 4rem;
-  background-color: aliceblue;
-  border-radius: 15px;
-  margin-top: -2rem;
-  text-align: center;
-  padding: 0.5rem;
   font-size: var(--fontSize-names);
+  background-color:var(--background-name);
+  font-weight: var(--fontWeight-names);
+  width: 10rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-top: -1rem;
+  text-align: center;
+  padding: 0.2rem;
 }
 
 .current-score-title {
+  font-size: var(--fontSize-names);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .current-score {
+  background-color: var(--background-score);
+  font-size: var(--fontSize-currentScore-bottom);
+  font-weight: var(--fontWeight-current-score);
   width: 6rem;
   height: 6rem;
-  background-color: aliceblue;
   border-radius: 10px;
+  padding-top: 0.6rem;
   text-align: center;
-  font-size: var(--fontSize-numbers);
-  padding: 1.2rem 0;
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .buttons-container {
@@ -39,20 +43,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   margin: 1rem;
-}
-
-.winner-announcement{
-  position: absolute;
-  bottom: 100%;
-  left: 25%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-
-  height: 10rem;
-  font-size: 9rem;
-  font-family: var(--font-title);
-  z-index: 5;
+  gap: 1rem;
 }

@@ -1,35 +1,37 @@
-
-
-.intro{
-   width: 40rem;
-   height: 60rem;
-
-   display: flex;
-   flex-direction: column;
-
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-
-   z-index: 10;
-   background: rgba(255, 255, 255, 1);
-   border-radius: 16px;
-
-
-   font-size: 1.2rem;
-   padding: 0 3rem;
+.intro {
+  font-size: var(--fontSize-text-intro);
+  width: 35rem;
+  height: 55rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  padding: 0 3rem;
+  border-radius: 5% 5% 5% 5%;
+  background: rgb(120, 178, 186);
+  box-shadow: rgba(120, 178, 186, 0.4) 5px 5px, rgba(120, 178, 186, 0.3) 10px 10px,
+    rgba(120, 178, 186, 0.2) 15px 15px, rgba(120, 178, 186, 0.1) 20px 20px,
+    rgba(120, 178, 186, 0.05) 25px 25px;
+  line-height: 1.2;
 }
 
-.intro-title{
-   font-family: var(--font-title);
-   font-size: 5rem   ;
-   text-align: center;
-   margin: 2rem 0;
+.intro-title {
+  font-family: var(--font-title);
+  font-size: var(--fontSize-header-intro);
+  text-align: center;
+  margin: 3rem 0;
 }
 
-.intro-subtitle{
-   font-size: 1.4rem;
-   margin-bottom: 0.5rem;
+.intro-subtitle {
+  font-size: var(--fontSize-subtitles-intro);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
+.intro-text {
+  font-weight: var(--fontWeight-text-intro);
+  line-height: 1.3;
+}

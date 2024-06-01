@@ -1,33 +1,42 @@
-import { useState } from "react";
-import { Game } from "./assets/components/Game/Game";
 import { IntroMenu } from "./assets/components/IntroMenu/IntroMenu";
+import { Game } from "./assets/components/Game/Game";
+import { useState } from "react";
 
 function App() {
   const [playerOneName, setPlayerOneName] = useState("");
   const [playerTwoName, setPlayerTwoName] = useState("");
-  const [scoreLimit, setScoreLimit] = useState();
   const [displayIntro, setDisplayIntro] = useState(true);
+  const [playerOneWin, setPlayerOneWin] = useState(0);
+  const [playerTwoWin, setPlayerTwoWin] = useState(0);
+  const [scoreLimit, setScoreLimit] = useState();
 
   return (
-    <div>{ displayIntro ?
-      <IntroMenu
-        playerOneName={playerOneName}
+    <div>
+      {displayIntro ? (
+        <IntroMenu
         setPlayerOneName={setPlayerOneName}
-        playerTwoName={playerTwoName}
         setPlayerTwoName={setPlayerTwoName}
-        scoreLimit={scoreLimit}
-        setScoreLimit={setScoreLimit}
-        displayIntro={displayIntro}
         setDisplayIntro={setDisplayIntro}
-      />
-      : <Game
+          playerOneName={playerOneName}
+          playerTwoName={playerTwoName}
+          setScoreLimit={setScoreLimit}
+          displayIntro={displayIntro}
+          scoreLimit={scoreLimit}
+        />
+      ) : (
+        <Game
+        setDisplayIntro={setDisplayIntro}
+        setPlayerOneWin={setPlayerOneWin}
+        setPlayerTwoWin={setPlayerTwoWin}
         playerOneName={playerOneName}
         playerTwoName={playerTwoName}
-        scoreLimit={scoreLimit}
-        setDisplayIntro={setDisplayIntro}
+        playerOneWin={playerOneWin}
+        playerTwoWin={playerTwoWin}
         setScoreLimit={setScoreLimit}
-      />
-}</div>
+        scoreLimit={scoreLimit}
+        />
+      )}
+    </div>
   );
 }
 
