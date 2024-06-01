@@ -12,11 +12,13 @@ export const ScoreCards = ({
     <div className="scores-container">
       <div className="player-wins"></div>
       <Score
+        className="player-one-colors"
         playerName={playerOneName}
         scoreLimit={scoreLimit}
         playerScore={playerOneScore}
       />
       <Score
+        className="player-two-colors"
         playerName={playerTwoName}
         scoreLimit={scoreLimit}
         playerScore={playerTwoScore}

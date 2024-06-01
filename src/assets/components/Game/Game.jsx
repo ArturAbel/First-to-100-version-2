@@ -19,9 +19,8 @@ export const Game = ({
   const [playerTwoScore, setPlayerTwoScore] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
   const [leftDice, setLeftDice] = useState(1);
-  const [RightDice, setRightDice] = useState(2);
+  const [rightDice, setRightDice] = useState(2);
   const [winner, setWinner] = useState(false);
-
 
   const rollDice = () => Math.floor(Math.random() * DICE_SIX) + 1;
 
@@ -34,10 +33,9 @@ export const Game = ({
     setCurrentScore((previousScore) => previousScore + rightRoll + leftRoll);
   };
 
-
   return (
     <div className="game-container">
-      {winner && <h1 className="winner-announcement">{currentPlayer} Won</h1>}
+      {winner && <h1 className="winner-announcement">{currentPlayer} Won!</h1>}
       <ScoreCards
         playerOneName={playerOneName}
         playerTwoName={playerTwoName}
@@ -51,7 +49,7 @@ export const Game = ({
         setDisplayIntro={setDisplayIntro}
         setScoreLimit={setScoreLimit}
         leftDice={leftDice}
-        RightDice={RightDice}
+        rightDice={rightDice}
       />
       <PlayerCard
         playerOneScore={playerOneScore}

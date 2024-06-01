@@ -11,10 +11,10 @@ export const Player = ({
   setCurrentScore,
   setPlayer,
   handleRollDice,
-  currentPlayer,
   scoreLimit,
   setWinner,
   otherPlayerName,
+  className,
 }) => {
   const [holdDisabled, setHoldDisabled] = useState(true);
   const [rollDisabled, setRollDisabled] = useState(false);
@@ -25,41 +25,36 @@ export const Player = ({
     setHoldDisabled(false);
   };
 
-
-
-  // NOTE: issue with player score, updated only after on click
-  const updatePlayerScore = () => setPlayerScore(playerScore + currentScore);
-
-  
-
-
   // Hold Button
-  const handleHoldButton = () => {    
-    updatePlayerScore();
-    checkPlayerScore();
-    setPlayer(otherPlayerName);
-    setCurrentScore(0);
+  const handleHoldButton = () => {
+    const newScore = playerScore + currentScore;
+    const endGame = checkPlayerScore(newScore);
+    setPlayerScore(newScore);
+    if (!endGame) {
+      setPlayer(otherPlayerName);
+      setCurrentScore(0);
+    }
     setHoldDisabled(true);
   };
 
-  const checkPlayerScore = () => {
-    if (playerScore === scoreLimit) {
+  const checkPlayerScore = (score) => {
+    if (score === scoreLimit) {
       setWinner(true);
       setRollDisabled(true);
-      currentPlayer = playerName;
-    } else if (playerScore > scoreLimit) {
+      setPlayer(playerName);
+      return true;
+    }
+
+    if (score > scoreLimit) {
       setWinner(true);
       setRollDisabled(true);
-      currentPlayer = otherPlayerName;
+      setPlayer(otherPlayerName);
+      return true;
     }
   };
 
-
-
-
-
   return (
-    <div className="player-container">
+    <div className={`player-container ${className}`}>
       <div className="player-card-name">{playerName}</div>
       <h3 className="current-score-title">Current Score</h3>
       <div className="current-score">{currentScore}</div>

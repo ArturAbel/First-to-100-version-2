@@ -1,6 +1,6 @@
 .dice-container {
   width: 42rem;
-  height: 15rem;
+  height: 9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,9 +8,21 @@
   position: relative;
 }
 
-.new-game-button {
-  width: 6rem;
-  height: 6rem;
-  position: absolute;
+.new-game-button{
+  width: 7rem;
+  height: 7rem;
   right: -8rem;
+  position: absolute;
+  color: #000;
+  font-weight: bold;
+  background-color: #bbb;
+  border: solid 5px #000;
+  border-width: 0 4px 5px 0;
+  border-radius: 5px;
+  border-color: transparent #ddd #999 transparent;
+  cursor: pointer;
+}
+
+.new-game-button:hover{
+  border-width: 0 2px 3px 0;
 }

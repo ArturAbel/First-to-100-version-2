@@ -12,6 +12,7 @@ export const IntroLower = ({
 }) => {
   const MIN_SCORE = 12;
   const MAX_SCORE = 100;
+  const MAX_NAME_LENGTH = 8;
 
   const [isDisabled, setIsDisabled] = useState(true);
 
@@ -25,28 +26,40 @@ export const IntroLower = ({
     }
   };
 
+  const handleSameName = (playerOneName, playerTwoName) => {
+    if (playerOneName === playerTwoName) {
+      setPlayerOneName("PLAYER 1");
+      setPlayerTwoName("PLAYER 2");
+    }
+  };
+
   return (
     <div className="intro-lower">
+      <span className="input-description">Player 1:</span>
       <input
         className="intro-name"
         type="text"
         value={playerOneName}
-        placeholder="Player one name"
+        maxLength={MAX_NAME_LENGTH}
+        placeholder="Name"
         onChange={(e) => {
           setPlayerOneName(e.target.value);
         }}
       />
+      <span className="input-description">Player 2:</span>
       <input
         className="intro-name"
         type="text"
         value={playerTwoName}
-        placeholder="Player two name"
+        maxLength={MAX_NAME_LENGTH}
+        placeholder="Name"
         onChange={(e) => {
           setPlayerTwoName(e.target.value);
         }}
       />
+      <span className="input-description">Max dice score:</span>
       <input
-        className="intro-input"
+        className="intro-score"
         type="number"
         value={scoreLimit}
         min={MIN_SCORE}
@@ -58,6 +71,7 @@ export const IntroLower = ({
         className="intro-start-button"
         disabled={isDisabled}
         onClick={() => {
+          handleSameName(playerOneName, playerTwoName);
           setDisplayIntro(false);
         }}
       >

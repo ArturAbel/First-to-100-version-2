@@ -1,12 +1,32 @@
+.button {
+  width: 7rem;
+  height: 3rem;
+  color: #000;
+  font-weight: bold;
+  float: left;
+  background-color: #bbb;
+  height: 4rem;
+  padding: 0 2rem;
+  border: solid 5px #000;
+  border-width: 0 4px 5px 0;
+  border-radius: 5px;
+  border-color: transparent #ddd #999 transparent;
+  cursor: pointer;
+}
 
-.button{
-   width: 7rem;
-   height: 3rem;
+.button:hover {
+  border-width: 0 2px 3px 0;
+  left: 2px;
+  top: 4px;
 }
 
 .button:disabled {
-   background-color: gray; 
-   color: white; 
-   cursor: not-allowed;  
-   opacity: 0.5; 
- }
+  background-color: gray;
+  color: #000;
+  cursor: not-allowed;
+  opacity: 0.5;
+  border-width: 0;
+  border-width: none;
+  left: 0;
+  top: 0;
+}

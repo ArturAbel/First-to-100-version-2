@@ -6,8 +6,9 @@ export const Dice = ({
   setDisplayIntro,
   setScoreLimit,
   leftDice,
-  RightDice,
+  rightDice,
 }) => {
+
   const handleDisplayIntro = () => {
     setScoreLimit();
     setDisplayIntro(true);
@@ -20,7 +21,7 @@ export const Dice = ({
   return (
     <div className="dice-container">
       <DiceCube key={randomKey} diceSide={leftDice} />
-      <DiceCube diceSide={RightDice} />
+      <DiceCube diceSide={rightDice} />
       <button className="new-game-button" onClick={handleDisplayIntro}>
         New Game
       </button>

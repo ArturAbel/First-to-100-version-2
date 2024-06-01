@@ -7,7 +7,7 @@ export const Button = ({
 
 }) => {
   return (
-    <button className="button" onClick={buttonAction} disabled={disabled}>
+    <button className="button" onClick={()=>buttonAction()} disabled={disabled}>
       {text}
     </button>
   );

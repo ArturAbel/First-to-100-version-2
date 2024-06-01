@@ -37,14 +37,6 @@ export const IntroMenu = ({
               The point you have earned will be accumulated to your total amount
               of points.
             </p>
-            <br />
-            <p className="intro-subtitle">
-              <strong>Special rules:</strong>
-            </p>
-            <p>
-              If you roll a double six (6-6), you lose the points accumulated in
-              that turn and your turn ends.
-            </p>
           </div>
 
           <IntroLower

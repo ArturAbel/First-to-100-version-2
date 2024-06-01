@@ -18,15 +18,14 @@ export const PlayerCard = ({
   scoreLimit,
 }) => {
 
-  console.log(`Here`,currentPlayer,`---`,playerOneName);
-
 
   return (
     <div className="player-card-container">
       {currentPlayer === playerOneName ? (
         <Player
+          className="player-one-colors"
           playerScore={playerOneScore}
-          playerName ={playerOneName}
+          playerName={playerOneName}
           setPlayerScore={setPlayerOneScore}
           currentScore={currentScore}
           setCurrentScore={setCurrentScore}
@@ -40,8 +39,9 @@ export const PlayerCard = ({
         />
       ) : (
         <Player
+          className="player-two-colors"
           playerScore={playerTwoScore}
-          playerName ={playerTwoName}
+          playerName={playerTwoName}
           setPlayerScore={setPlayerTwoScore}
           currentScore={currentScore}
           setCurrentScore={setCurrentScore}

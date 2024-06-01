@@ -1,11 +1,21 @@
 :root {
   
   /* Fonts */
-   --font-dice: "TumblinDiceJ", sans-serif;
+   --font-dice: "GameblinkDemo", sans-serif;
   --font-title: "Komigo", sans-serif;
 
 
   /* Font Sizes */
   --fontSize-numbers: 2rem;
   --fontSize-names: 1.7rem;
+}
+
+@font-face {
+  font-family: 'GameblinkDemo';
+  src: url('/assets/fonts/GameblinkDemo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Komigo';
+  src: url('/assets/fonts/komigo.ttf') format('truetype');
 }
