@@ -16,16 +16,16 @@ export const ScoreCards = ({
     <div className="scores-container">
       <Score
         className="player-one-colors"
+        playerScore={playerOneScore}
         playerName={playerOneName}
         scoreLimit={scoreLimit}
-        playerScore={playerOneScore}
       />
       <Wins playerOneWin={playerOneWin} playerTwoWin={playerTwoWin} />
       <Score
         className="player-two-colors"
+        playerScore={playerTwoScore}
         playerName={playerTwoName}
         scoreLimit={scoreLimit}
-        playerScore={playerTwoScore}
       />
       <div className="player-wins"></div>
     </div>

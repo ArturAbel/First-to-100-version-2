@@ -1,6 +1,6 @@
 import "./DiceCube.css";
 
-export const DiceCube = ({ diceSide }) => {
+export const DiceCube = ({ diceSide, isRolling }) => {
   const handleDiceSide = () => {
     switch (diceSide) {
       case 1:
@@ -21,7 +21,10 @@ export const DiceCube = ({ diceSide }) => {
   };
 
   return (
-    <div className="dice" style={{ transform: handleDiceSide() }}>
+    <div
+      className={`dice  ${isRolling ? "animation" : ""}`}
+      style={{ transform: handleDiceSide() }}
+    >
       <div className="face front"></div>
       <div className="face back"></div>
       <div className="face top"></div>

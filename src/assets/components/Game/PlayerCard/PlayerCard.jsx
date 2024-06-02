@@ -15,13 +15,12 @@ export const PlayerCard = ({
   currentScore,
   playerOneName,
   playerTwoName,
+  setIsRolling,
   scoreLimit,
   setWinner,
   setPlayer,
   winner,
 }) => {
-
-
   return (
     <div className="player-card-container">
       {currentPlayer === playerOneName ? (
@@ -37,12 +36,11 @@ export const PlayerCard = ({
           currentPlayer={currentPlayer}
           playerName={playerOneName}
           currentScore={currentScore}
+          setIsRolling={setIsRolling}
           scoreLimit={scoreLimit}
           setPlayer={setPlayer}
           setWinner={setWinner}
           winner={winner}
-
-
         />
       ) : (
         <Player
@@ -56,6 +54,7 @@ export const PlayerCard = ({
           playerScore={playerTwoScore}
           currentPlayer={currentPlayer}
           currentScore={currentScore}
+          setIsRolling={setIsRolling}
           playerName={playerTwoName}
           scoreLimit={scoreLimit}
           setPlayer={setPlayer}

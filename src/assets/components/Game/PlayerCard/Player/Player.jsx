@@ -11,6 +11,7 @@ export const Player = ({
   handleRollDice,
   currentScore,
   setPlayerWin,
+  setIsRolling,
   playerScore,
   playerName,
   setPlayer,
@@ -25,6 +26,14 @@ export const Player = ({
   const handleRollButton = () => {
     handleRollDice();
     setHoldDisabled(false);
+    setIsRolling(true);
+    setRollDisabled(true);
+
+    // Rolling Animation
+    setTimeout(() => {
+      setIsRolling(false);
+      setRollDisabled(false);
+    }, 3000);
   };
 
   // Hold Button
