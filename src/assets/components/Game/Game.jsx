@@ -23,11 +23,12 @@ export const Game = ({
   const [currentPlayer, setPlayer] = useState(playerOneName);
   const [playerOneScore, setPlayerOneScore] = useState(0);
   const [playerTwoScore, setPlayerTwoScore] = useState(0);
-
   const [currentScore, setCurrentScore] = useState(0);
+  const [isRolling, setIsRolling] = useState(false);
   const [rightDice, setRightDice] = useState(2);
   const [leftDice, setLeftDice] = useState(1);
   const [winner, setWinner] = useState(false);
+
 
   const rollDice = () => Math.floor(Math.random() * DICE_SIX) + 1;
 
@@ -58,6 +59,7 @@ export const Game = ({
         setDisplayIntro={setDisplayIntro}
         setScoreLimit={setScoreLimit}
         rightDice={rightDice}
+        isRolling={isRolling}
         leftDice={leftDice}
       />
       <PlayerCard
@@ -73,6 +75,7 @@ export const Game = ({
         playerOneName={playerOneName}
         playerTwoName={playerTwoName}
         currentScore={currentScore}
+        setIsRolling={setIsRolling}
         scoreLimit={scoreLimit}
         setWinner={setWinner}
         setPlayer={setPlayer}

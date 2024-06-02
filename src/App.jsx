@@ -14,9 +14,9 @@ function App() {
     <div>
       {displayIntro ? (
         <IntroMenu
-        setPlayerOneName={setPlayerOneName}
-        setPlayerTwoName={setPlayerTwoName}
-        setDisplayIntro={setDisplayIntro}
+          setPlayerOneName={setPlayerOneName}
+          setPlayerTwoName={setPlayerTwoName}
+          setDisplayIntro={setDisplayIntro}
           playerOneName={playerOneName}
           playerTwoName={playerTwoName}
           setScoreLimit={setScoreLimit}
@@ -25,15 +25,15 @@ function App() {
         />
       ) : (
         <Game
-        setDisplayIntro={setDisplayIntro}
-        setPlayerOneWin={setPlayerOneWin}
-        setPlayerTwoWin={setPlayerTwoWin}
-        playerOneName={playerOneName}
-        playerTwoName={playerTwoName}
-        playerOneWin={playerOneWin}
-        playerTwoWin={playerTwoWin}
-        setScoreLimit={setScoreLimit}
-        scoreLimit={scoreLimit}
+          setDisplayIntro={setDisplayIntro}
+          setPlayerOneWin={setPlayerOneWin}
+          setPlayerTwoWin={setPlayerTwoWin}
+          playerOneName={playerOneName}
+          playerTwoName={playerTwoName}
+          playerOneWin={playerOneWin}
+          playerTwoWin={playerTwoWin}
+          setScoreLimit={setScoreLimit}
+          scoreLimit={scoreLimit}
         />
       )}
     </div>

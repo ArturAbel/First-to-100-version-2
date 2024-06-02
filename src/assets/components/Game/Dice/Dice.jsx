@@ -5,6 +5,7 @@ import "./Dice.css";
 export const Dice = ({
   setDisplayIntro,
   setScoreLimit,
+  isRolling,
   rightDice,
   leftDice,
 }) => {
@@ -14,14 +15,11 @@ export const Dice = ({
     setDisplayIntro(true);
   };
 
-  const randomKey = () => {
-    return Math.random();
-  };
 
   return (
     <div className="dice-container">
-      <DiceCube key={randomKey} diceSide={leftDice} />
-      <DiceCube diceSide={rightDice} />
+      <DiceCube diceSide={leftDice} isRolling={isRolling}/>
+      <DiceCube diceSide={rightDice} isRolling={isRolling}/>
       <button className="new-game-button" onClick={handleDisplayIntro}>
         New Game
       </button>
